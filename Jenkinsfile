@@ -23,7 +23,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo 'Build'
+                echo 'Deploy'
                 sh "aws lambda update-function-code --function-name $function_name --region us-east-2 --s3-bucket jenkinsbucket1998 --s3-key sample-1.0.3.jar"
             }
         }
